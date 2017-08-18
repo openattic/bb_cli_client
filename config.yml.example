@@ -1,0 +1,12 @@
+bitbucket:
+  username: openattic  # The username of the repository to check for pull requests
+  repository: openattic  # The repository of the user above to check for pull requests
+  key: e2e  # A unique key to store the internal data in for already checked pull requests
+  ignores:  # A list of tags which are ignored if found in the title of the pull request
+    - 2.x
+  append_last:  # A list of tags which will be moved at the end of the pull request list if found
+                # in the title of a pull request. Calling `bb.py pr next` will return them last.
+    - wip
+  credentials:  # Credentials for the authentication
+    username: openattic-jenkins  # This user is going to approve/unapprove pull requests
+    password: 123asdf
